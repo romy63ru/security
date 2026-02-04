@@ -18,8 +18,12 @@ This document describes the intended architecture for a Windows desktop applicat
 - Building a plugin ecosystem (unless explicitly added later).
 
 ## System Context
-- Primary actor: the interactive end user on the Windows machine.
+
+
+- Primary actor: the interactive end user on the Windows machine (standard user context).
 - External systems: optional (e.g., file system, network services), not assumed by default.
+
+
 
 ## High-Level Component Model
 
@@ -200,6 +204,8 @@ See `docs/attac-vectors.md` for a fuller threat/mitigation list.
 
 ## Open Decisions (Fill In)
 - IPC choice for UI <-> API: loopback HTTP vs named pipes.
+
+
 - Is the Core API always-on (service) or started on-demand by the UI?
 - Persistence: database type (SQLite/local files/etc.), schema ownership, migration strategy.
 - Legacy integration: separate process vs in-proc module; request/response vs event-driven.
