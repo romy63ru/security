@@ -1,8 +1,8 @@
 .DS_Store
 
 # Common local/editor files
+.codex/
 .vscode/
 .idea/
 *.swp
 *~
-
