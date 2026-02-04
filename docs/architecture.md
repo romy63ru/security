@@ -1,17 +1,21 @@
 # Architecture
 
-This document describes the intended architecture for a Windows desktop application composed of:
+This document describes the intended architecture for a Windows desktop
+application composed of:
 - A legacy **Win32/MFC** component
 - A **.NET 10** application built using **DDD** principles and exposing an **API**
 - A new **Avalonia** UI that interacts with the API
 - An integration path between old and new components using a **JSON protocol**
-- All components running on **one Windows machine**, typically under a **standard user** account (with other local users potentially having admin rights)
+- All components running on **one Windows machine**, typically under a
+  **standard user** account (with other local users potentially having admin
+  rights)
 
 ## Goals
 - Allow incremental modernization (legacy + new can coexist).
 - Keep domain/business logic centralized in the .NET application layer.
 - Make UI layers (Avalonia, MFC) thin and replaceable.
-- Provide a stable integration surface via versioned contracts (JSON protocol + API).
+- Provide a stable integration surface via versioned contracts (JSON protocol
+  + API).
 
 ## Non-Goals
 - Designing a distributed/multi-machine deployment (this is a single-machine system).
